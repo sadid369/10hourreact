@@ -1,9 +1,19 @@
-function Video() {
+import "./Video.css";
+function Video({ title, channel, views, time }) {
   return (
-    <div>
-      <img src="http://placeimg.com/160/90/any" alt="Katherine Johnson" />;
-      <div>React Js Tutorial - components</div>
-    </div>
+    <>
+      <div className={`container`}>
+        <div className={`pic`}>
+          <img src="http://placeimg.com/160/90/any" alt="Katherine Johnson" />;
+        </div>
+        <div className={`title`}>{title}</div>
+        <div className={`channel`}>{channel}</div>
+        <div className={`views`}>
+          {views} views <span>.</span>
+          {time}
+        </div>
+      </div>
+    </>
   );
 }
 
